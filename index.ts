@@ -1,9 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
+import * as random from "@pulumi/random";
 
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-bucket");
+const name = new random.RandomPet("petname");
 
-// Export the name of the bucket
-export const bucketName = bucket.id;
