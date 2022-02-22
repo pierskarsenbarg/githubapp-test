@@ -18,11 +18,11 @@ steps:
     git: "github"
     stage: "clone"
 
-echo: 
-  title: Test variables
-  image: alpine
-  commands:
-    - echo $CF_BRANCH
+  echo: 
+    title: Test variables
+    image: alpine
+    commands:
+      - echo $CF_BRANCH
 
   preview:
     title: "Preview Pulumi"
