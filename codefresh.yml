@@ -24,7 +24,6 @@ steps:
     image: "pulumi/pulumi" # The image in which command will be executed
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
-          - rm -rf .git
           - npm install
           - pulumi login
           - pulumi stack select dev
